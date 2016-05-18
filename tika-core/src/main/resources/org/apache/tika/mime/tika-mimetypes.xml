@@ -6689,5 +6689,17 @@
     <glob pattern="*.r"/>
     <sub-class-of type="text/plain"/>
   </mime-type>
+  
+  <mime-type type="text/x-ifc">
+    <_comment>IFC XML</_comment>
+    <glob pattern="*.ifcxml "/>
+    <sub-class-of type="application/xml"/>
+    <magic priority="50">
+      <match value="&lt;?xml" type="string" offset="0"/>
+      <match value="&lt;?XML" type="string" offset="0"/>
+      <match value="xmlns:ifc" type="string" offset="244"/>
+      <match value="ifcXML" type="string" offset="279"/>
+    </magic>
+  </mime-type>
 
 </mime-info>
